@@ -15,6 +15,9 @@
                     <template v-if="state==0">
                         <v-btn @click='shuffle()'>เริ่มเล่น</v-btn>
                       </template>
+                      <template v-if="state==0">
+                        <v-btn @click='goToHomePage()'>กลับหน้าแรก</v-btn>
+                      </template>
                       <template v-if="state==1">
                         <v-row>
                             <v-col v-for="(c,i) of cards" cols="2" class='text-center'>
@@ -43,6 +46,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vuetify@3.4.10/dist/vuetify.min.js"></script>
 
     <script>
+        function goToHomePage() {
+            window.location.href = "../index.html";
+        }
         const vuetify = Vuetify.createVuetify();
         const app = Vue.createApp({
             data() {
