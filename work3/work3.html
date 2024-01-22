@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first Vue page</title>
-    <style>
-        .text-box{
-            margin-left: 5%;
-        }
-    </style>
+
 </head>
 <body>
     <div id="app">
         <v-app>
             <v-container>
-              <v-card style="max-width: 800px;">
-                <v-card-title class="bg-orange-darken-4">{{title}}</v-card-title>
+              <v-card style="width: 100%;">
+                <v-card-title class="bg-blue-darken-4">{{title}}</v-card-title>
                 <v-card-text class="pa-4">
-                    <template v-if="state==0" class="text-box">
-                        <v-btn @click='shuffle()'>เริ่มเล่น</v-btn>
+                    <template v-if="state==0">
+                        <v-btn @click='shuffle()' style="margin-right: 5%;">เริ่มเล่น</v-btn>
                       </template>
-                      <template v-if="state==0" class="text-box">
+                      <template v-if="state==0" >
                         <v-btn onclick="goToHomePage()">กลับหน้าแรก</v-btn>
                       </template>
                       <template v-if="state==1">
@@ -38,8 +34,8 @@
                         <v-btn @click="state=0">ตกลง</v-btn>
                     </template>   
                 </v-card-text>
-                <v-bottom-navigation class="bg-grey">
-                  <div class="text-body-1">{{footer}}</div>
+                <v-bottom-navigation class="bg-blue-darken-4">
+                  <div class="text-body-1" style="padding: 15px;">{{footer}}</div>
                 </v-bottom-navigation>
               </v-card>
             </v-container>
