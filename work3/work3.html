@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first Vue page</title>
+    <style>
+        .text-box{
+            margin-left: 5%;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -12,10 +17,10 @@
               <v-card style="max-width: 800px;">
                 <v-card-title class="bg-orange-darken-4">{{title}}</v-card-title>
                 <v-card-text class="pa-4">
-                    <template v-if="state==0">
+                    <template v-if="state==0" class="text-box">
                         <v-btn @click='shuffle()'>เริ่มเล่น</v-btn>
                       </template>
-                      <template v-if="state==0">
+                      <template v-if="state==0" class="text-box">
                         <v-btn onclick="goToHomePage()">กลับหน้าแรก</v-btn>
                       </template>
                       <template v-if="state==1">
