@@ -16,7 +16,7 @@
                         <v-btn @click='shuffle()'>เริ่มเล่น</v-btn>
                       </template>
                       <template v-if="state==0">
-                        <v-btn @click='goToHomePage()'>กลับหน้าแรก</v-btn>
+                        <v-btn onclick="goToHomePage()">กลับหน้าแรก</v-btn>
                       </template>
                       <template v-if="state==1">
                         <v-row>
